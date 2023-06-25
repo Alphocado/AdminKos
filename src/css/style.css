@@ -1,0 +1,161 @@
+/* Reset default browser styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ddd;
+
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.product h3 {
+  margin-top: 0;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.quantity-input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.buy-btn {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.buy-btn:hover {
+  background-color: #0056b3;
+}
+
+.cart-items {
+  margin-top: 20px;
+}
+
+.total-price,
+.total-hari {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-weight: bolder;
+}
+
+.cart-items ul{
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+}
+
+.cart-items ul li {
+  display: inline;
+}
+.cart-items ul li:nth-child(1)::after {
+  content: " | ";
+}
+.cart-items ul li:nth-child(2)::before {
+  content: "Rp.";
+}
+.cart-items ul li:nth-child(2)::after {
+  content: " | ";
+}
+.cart-items ul li:nth-child(3)::after {
+  content: " hari";
+}
+
+#checkout-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#checkout-btn:hover {
+  background-color: #0056b3;
+}
+
+.container-pemesanan label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.container-pemesanan input[type="text"],
+.container-pemesanan input[type="number"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}
+.container-pemesanan input[type="text"] {
+  margin-bottom: 20px;
+}
+.container-pemesanan input[type="number"] {
+  margin-bottom: 40px;
+}
+
+
+
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .satu, .dua{
+    width: calc(50% - 10px);
+  }
+  .tiga {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .product {
+    width: calc(33.33% - 10px);
+  }
+}
