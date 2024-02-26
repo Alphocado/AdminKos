@@ -1,16 +1,19 @@
 <?php
+// somethings
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="src/css/style.css">
   <title>Pemesanan Kamar Kos</title>
 </head>
+
 <body>
-  <input type="hidden" value="<?=$currentDateTime?>" name="datetime">
+  <input type="hidden" value="<?= $currentDateTime ?>" name="datetime">
   <form class="container" method="post" action="src/server/save_order.php">
     <h1>Pemesanan Kamar Kos</h1>
 
@@ -68,17 +71,18 @@
     <button id="checkout-btn" type="input">Checkout</button>
 
   </form>
-  
+
   <?php
-    if(isset($_GET["error"])){
-      ?>
-      <script>
-        alert("<?=$_GET["error"]?>");
-      </script>
-      <?php
-    }
+  if (isset($_GET["error"])) {
+  ?>
+    <script>
+      alert("<?= $_GET["error"] ?>");
+    </script>
+  <?php
+  }
   ?>
   <script src="src/Js/app.js">
   </script>
 </body>
+
 </html>
